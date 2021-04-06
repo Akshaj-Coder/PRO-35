@@ -1,11 +1,13 @@
 var ballon, ballonanimation;
 var bgimg;
-
+var ballonimg2;
 
 
 function preload() {
       bgimg = loadImage("Hot Air Ballon-01.png")
       ballonanimation = loadAnimation("Hot Air Ballon-02.png","Hot Air Ballon-03.png","Hot Air Ballon-04.png");
+      //ballonimg2 = loadImage("")
+      ballon.scale -= 0.01; 
 }
 
 function setup() {
@@ -33,12 +35,13 @@ function draw() {
 
   if (keyDown(UP_ARROW)) {
     updateHeight(0,-10);
+        ballon.addAnimation("hotAirBallon",ball)
   }
 
   else if(keyDown(DOWN_ARROW)) {
     ballon.y = ballon.y + 10;l
   }
-
+     
 
   drawSprites();
 }
